@@ -1,0 +1,205 @@
+@use "animate.css/animate.min.css" as *;
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}
+html,
+body,
+#app {
+  height: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+html {
+  --ma-bg-color: #ffffff;
+  --ma-primry-color: #409eff;
+  --ma-font-color: #ffffff;
+  --ma-shallow-font-color: #909399;
+  --ma-sidebar-bg-color: #001529;
+  --ma-tag-check-color: #409eff;
+  --ma-tag-nullCheck-color: #ffffff;
+  --ma-tag-nullCheck-border-color: #e4e7ed;
+  --ma-tag-nullCheck-font-color: rgb(97, 97, 97);
+  --ma-tag-border-color: #e4e7ed;
+
+  .el-menu {
+    background-color: var(--ma-sidebar-bg-color);
+    --el-menu-text-color: rgb(192, 196, 204);
+    .el-sub-menu__title {
+      color: rgb(192, 196, 204);
+      background-color: var(--ma-sidebar-bg-color);
+      .iconfont {
+        margin-right: 8px;
+      }
+    }
+    .el-menu-item.is-active {
+      color: #ffffff;
+    }
+    .el-menu .el-menu-item.is-active {
+      background-color: var(--ma-primry-color) !important;
+    }
+    .el-menu-item.is-active:hover {
+      background-color: var(--ma-primry-color) !important;
+    }
+    .el-menu-item:hover {
+      background-color: #434343 !important;
+      color: #ffffff;
+    }
+    .el-menu-item.is-active {
+      background-color: var(--ma-primry-color);
+    }
+  }
+  .el-main {
+    padding: 0;
+  }
+}
+
+.search-card {
+  padding: 30px 10px 15px 10px;
+}
+
+.mg-t10 {
+  margin-top: 10px;
+}
+
+.space-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 定义滚动条整体的宽度 */
+::-webkit-scrollbar {
+  width: 10px; /* 水平滚动条的宽度 */
+  height: 2px; /* 垂直滚动条的高度 */
+}
+
+/* 定义滚动条轨道（背景）样式 */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* 轨道的颜色 */
+}
+
+/* 定义滚动条滑块（thumb）样式 */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* 滑块颜色 */
+  border-radius: 6px; /* 圆角效果 */
+  border: 2px solid #ccc; /* 边框样式 */
+}
+
+/* 当鼠标悬停在滚动条滑块上时的样式 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* 滑块hover时的颜色 */
+}
+
+.mobile-table {
+  .m-table,
+  .m-table-head,
+  .m-table-body {
+    width: 100%;
+  }
+  .m-table-head,
+  .m-table-body {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  .head-item {
+    text-align: center;
+  }
+  .m-table-head {
+    padding: 10px 0;
+    border: 0.5px solid #ccc;
+  }
+  .m-table-body {
+    padding: 10px 0;
+    border: 0.5px solid #ccc;
+    border-top: none;
+  }
+  .m-table-title {
+    width: 15%;
+    .text {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  .m-table-cover {
+    width: 40%;
+    img {
+      display: block;
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+  .m-table-intro {
+    width: 30%;
+    .text {
+      color: #666;
+      line-height: 20px;
+      font-size: 12px;
+    }
+  }
+  .train-type,
+  .file-name,
+  .file-type {
+    width: 25%;
+    .text {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+  .m-table-opera {
+    width: 15%;
+    text-align: center;
+    .btn {
+      font-size: 12px;
+      color: #409eff;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .mobile {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed;
+    position: relative;
+    top: 0;
+    .drawer-bg {
+      background: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      top: 0;
+      height: 100%;
+      position: absolute;
+      z-index: 999;
+      .drawer-btn {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: #409eff;
+        border-radius: 4px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 250px;
+      }
+    }
+    .sidebar-el-menu {
+      display: none;
+    }
+  }
+  .sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1001;
+  }
+}

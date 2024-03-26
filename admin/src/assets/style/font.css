@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4405060 */
+  src: url('./font/iconfont.woff2?t=1704870743654') format('woff2'),
+       url('./font/iconfont.woff?t=1704870743654') format('woff'),
+       url('./font/iconfont.ttf?t=1704870743654') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fenxi:before {
+  content: "\e60b";
+}
+
+.icon-lianxi:before {
+  content: "\e672";
+}
+
+.icon-ruanjian:before {
+  content: "\e6e8";
+}
+
+.icon-anquan:before {
+  content: "\e602";
+}
+
+.icon-world:before {
+  content: "\e603";
+}
+
+.icon-bixudaifanghuyanjing:before {
+  content: "\e658";
+}
+
+.icon-hufu-xianshi:before {
+  content: "\e60d";
+}
+
+.icon-wendang:before {
+  content: "\e600";
+}
+
+.icon-liebiao:before {
+  content: "\e601";
+}
+
+.icon-dashboard:before {
+  content: "\e669";
+}
+
+.icon-collaseLeft:before {
+  content: "\e61f";
+}
+
+.icon-collpaseRight:before {
+  content: "\e64b";
+}
+
+.icon-permission:before {
+  content: "\e61c";
+}
+
+.icon-caidan:before {
+  content: "\e60a";
+}
+
+.icon-checkbox:before {
+  content: "\e686";
+}
+
+.icon-checkedbox:before {
+  content: "\e687";
+}
+
