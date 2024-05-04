@@ -27,8 +27,8 @@ export class UserController {
   @Public()
   @ApiOperation({ summary: '登录' })
   async handleLoginUser(@Body() loginUser, @Session() session) {
-    const loginInfo = JSON.parse(decrypt(loginUser.data))
-    return await this.userService.handleLoginUser(loginInfo, session.code);
+    // const loginInfo = JSON.parse(decrypt(loginUser.data))
+    return await this.userService.handleLoginUser(loginUser, session.code);
   }
 
   @Get('info')
